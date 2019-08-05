@@ -8,6 +8,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { NewsComponent } from './components/news/news.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AdminComponent } from './components/admin/admin.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { AppRoutingModule } from './app-routing.module';
     AboutComponent,
     ContactComponent,
     NewsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
