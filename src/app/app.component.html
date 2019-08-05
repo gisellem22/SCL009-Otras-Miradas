@@ -1,19 +1,27 @@
-<nav class="navbar navbar-light bg-light" style="padding: 1%">
-  <a class="navbar-brand mx-auto d-block text-center order-0 order-md-1" routerLink="/home" routerLinkActive="active">
-    <img class="img-logo img-fluid" src="../assets/img/OMiradas-logo.png" alt="Logo Otras Miradas"></a>
-  <div class="container-fluid">
-    <div class="row">
-      <button class="btn btn-warning rounded-0 col-6" type="button" style="color: white" routerLink="/news"
-        routerLinkActive="active">Testimonios</button>
-      <button class="btn btn-danger rounded-0 col-6" type="button" routerLink="/about" routerLinkActive="active">Sobre
-        Nosotros</button>
-      <button class="btn btn-primary rounded-0 my-1 col-6" type="button" routerLink="/contact"
-        routerLinkActive="active">Sobre las NEE</button>
-      <button class="btn btn-success rounded-0 my-1 col-6" type="button" routerLink="/news"
-        routerLinkActive="active">Beneficios</button>
+<header>
+  <nav class="navbar navbar-light bg-light">
+    <div class="text-align:center m-4">
+      <a class="navbar-brand" routerLink="/home" routerLinkActive="active">
+        <img style="text-align: center" width="300" src="../assets/img/OMiradas-logo.png" alt="Logo Otras Miradas">
+      </a>
     </div>
-  </div>
-</nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="text-align:center m-2">
+            <button class="btn btn-warning btn-sm m-3" type="button" routerLink="/news"
+            routerLinkActive="active"><h6>Profesionales</h6></button>
+          <button class="btn btn-warning btn-sm m-1" type="button" routerLink="/about" 
+            routerLinkActive="active"><h6>Sobre Nosotros</h6></button>
+          <button class="btn btn-warning btn-sm m-3" type="button" routerLink="/contact"
+            routerLinkActive="active"><h6>Sobre las NEE</h6></button>
+          <button class="btn btn-warning btn-sm m-1" type="button" routerLink="/news"
+            routerLinkActive="active"><h6>Talleres</h6></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
 
 <router-outlet></router-outlet>
 
