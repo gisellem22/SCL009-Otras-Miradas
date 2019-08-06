@@ -1,6 +1,21 @@
-.photo {
+/* .photo {
     width: 300px;
     height:200px;
     display:block;
     margin:auto;
+} */
+.h4 {
+    color: #0000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: inherit;
+  }
+.h5 {
+    color: rgba(194, 186, 186, 0.452);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: inherit;
+  }
+.h6 {
+  color: #0000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
 }

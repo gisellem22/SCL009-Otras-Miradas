@@ -1,21 +1,56 @@
-<nav class="navbar navbar-light bg-light" style="padding: 1%">
-  <a class="navbar-brand mx-auto d-block text-center order-0 order-md-1" routerLink="/home" routerLinkActive="active">
-    <img class="img-logo img-fluid" src="../assets/img/OMiradas-logo.png" alt="Logo Otras Miradas"></a>
-  <div class="container-fluid">
-    <div class="row">
-      <button class="btn btn-warning rounded-0 col-6" type="button" style="color: white" routerLink="/news"
-        routerLinkActive="active">Testimonios</button>
-      <button class="btn btn-danger rounded-0 col-6" type="button" routerLink="/about" routerLinkActive="active">Sobre
-        Nosotros</button>
-      <button class="btn btn-primary rounded-0 my-1 col-6" type="button" routerLink="/contact"
-        routerLinkActive="active">Sobre las NEE</button>
-      <button class="btn btn-success rounded-0 my-1 col-6" type="button" routerLink="/news"
-        routerLinkActive="active">Beneficios</button>
+<!-- Header -->
+<header>
+  <nav class="navbar navbar-light bg-light">
+    <div class="text-align:center m-4">
+      <a class="navbar-brand" routerLink="/home" routerLinkActive="active">
+        <img style="text-align: center" width="300" src="../assets/img/OMiradas-logo.png" alt="Logo Otras Miradas">
+      </a>
     </div>
-  </div>
-</nav>
-
+    <div class="container-fluid">
+      <div class="row">
+        <div class="text-align:center m-2">
+          <button class="btn btn-warning btn-sm m-2" type="button" routerLink="/contact"
+            routerLinkActive="active"><h6>Profesionales</h6></button>
+          <button class="btn btn-warning btn-sm m-1" type="button" routerLink="/about" 
+            routerLinkActive="active"><h6>Sobre Nosotros</h6></button>
+          <button class="btn btn-warning btn-sm mt-1 m-2" type="button" routerLink="/news"
+            routerLinkActive="active"><h6>Talleres</h6></button>
+          <button class="btn btn-warning btn-sm mt-1 m-2" type="button" routerLink="/condition"
+            routerLinkActive="active"><h6>Diagnosticos </h6></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- SPA -->
 <router-outlet></router-outlet>
+<!-- Footer -->
+<footer class="text-center w-100 mt-5 mr-5">
+  
+  <div class="container text-left w-100">
+      <h4> Siguenos en nuestras redes </h4>
+      <div class="rounded float-left m-3">
+        <a href="">
+          <img  class="img-fluid  m-2" width="60" src="https://i.ibb.co/N1QG2Wz/whatsapp.png" alt="logo whatsapp">
+          <h6>996781226 </h6>
+        </a>
+      </div>
+      <div class="rounded float-left m-3">
+        <a href="https://www.instagram.com/fundacion.otras.miradas/?utm_source=ig_profile_share&igshid=1u187ez8g2dqj">
+          <img  class="img-fluid  m-2" width="60" src="https://i.ibb.co/QptVhkv/instagram-new.png" alt="logo instagram">
+          <h6> Instagram </h6>
+        </a>
+      </div>
+      <div class="rounded float-left m-3">
+        <a href="https://www.facebook.com/groups/891525974242365/">
+          <img  class="img-fluid  m-2" width="60" src="https://i.ibb.co/hRLfYGp/facebook-circled.png" alt="logo facebook">
+          <h6> Facebook </h6>
+        </a>  
+      </div> 
+  </div>
+</footer>
+
+
 
 <!-- <div style="text-align:center">
   <h1> Welcome to {{ title }}! </h1>
