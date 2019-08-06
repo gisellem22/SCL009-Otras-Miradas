@@ -1,40 +1,37 @@
 <form>
     <div>
-    <label for="specialty">Nombre del especialista:</label>
-    <select class="form-control form-control" #specialty id="specialty" (change)="onChange($event)">
-        <option [value]="Broncopulmonar">Broncopulmonar</option>
-        <option [value]="Cirujano">Cirujano</option>
-        <option [value]="Fisiatra">Fisiatra</option>
-        <option [value]="Fonoaudiologia">Fonoaudiologia</option>
-        <option [value]="Genetista">Genetista</option>
-        <option [value]="Infectologo">Infectologo</option>
-        <option [value]="Kinesiologo">Kinesiologo</option>
-        <option [value]="Neurologa">Neurologa</option>
-        <option [value]="Psicologo">Psicologo</option>
-        <option [value]="Psicopedagoga">Psicopedagoga</option>
-        <option [value]="TerapeutaOcupacional">TerapeutaOcupacional</option>   
+    <label for="specialty">Seleccione especilidad:</label>
+    <select class="form-control form-control" id="specialty" (change)="onChange($event)">
+        <option value="Broncopulmonar">Broncopulmonar</option>
+        <option value="Cirugía">Cirugía</option>
+        <option value="Fisiatría">Fisiatría</option>
+        <option value="Fonoaudiología">Fonoaudiología</option>
+        <option value="Genética Clínica">Genética Clínica</option>
+        <option value="Infectología">Infectología</option>
+        <option value="Kinesiología">Kinesiología</option>
+        <option value="Neurología">Neurología</option>
+        <option value="Psicología">Psicología</option>
+        <option value="Psicopedagogía">Psicopedagogía</option>
+        <option value="Terapia Ocupacional">Terapia Ocupacional</option>   
     </select>
 </div>
     <div>
         <label for="specialist">Nombre del especialista:</label>
-        <input type="text" class="form-control" id="specialist" placeholder="Ingresa el texto aquí...">
+        <input type="text" #specialist class="form-control" id="specialist" placeholder="Ingresa el texto aquí...">
     </div>
     <div>
         <label for="workplace">Lugar de trabajo:</label>
-        <input type="text" class="form-control" id="workplace" placeholder="Ingresa el texto aquí...">
+        <input type="text" #workplace class="form-control" id="workplace" placeholder="Ingresa el texto aquí...">
     </div>
     <div>
         <label for="contact">Contacto:</label>
-        <input type="text" class="form-control" id="contact" placeholder="Ingresa el correo/teléfono/etc...">
+        <input type="text" #contact class="form-control" id="contact" placeholder="Ingresa el correo/teléfono/etc...">
     </div>
     <div>
         <label for="ensurance">Previsión de salud que atiende:</label>
-        <input type="text" class="form-control" id="ensurance" placeholder="Ingresa el correo/teléfono/etc...">
+        <input type="text" #ensurance class="form-control" id="ensurance" placeholder="Ingresa el correo/teléfono/etc...">
     </div>
     <div>
-            <button class="btn btn-primary">Añadir</button>    
+            <button class="btn btn-primary" (click)="onClick(specialist.value, workplace.value, contact.value,ensurance.value)">Añadir</button>    
     </div>    
 </form>
-
-<input [value]="inputclient" #clientName type="text" class="form-control" aria-label="Sizing example input"
-    aria-describedby="inputGroup-sizing-lg">
