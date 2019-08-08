@@ -17,6 +17,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { AppRoutingModule } from './app-routing.module';
 import { AdminComponent } from './components/admin/admin.component';
 import { FormsModule } from '@angular/forms';
+import { ProfessionalsComponent } from './components/professionals/professionals.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     ContactComponent,
     NewsComponent,
     PageNotFoundComponent,
-    AdminComponent
+    AdminComponent,
+    ProfessionalsComponent
   ],
   imports: [
     BrowserModule,

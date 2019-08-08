@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfessionalService } from '../../services/professional.service';
-import { PRO } from 'src/app/models/professional';
 
 @Component({
   selector: 'app-news',
@@ -9,20 +7,10 @@ import { PRO } from 'src/app/models/professional';
 })
 export class NewsComponent implements OnInit {
 
-  professionals: PRO[];
 
-  constructor(public professionalService: ProfessionalService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.professionalService.getProfessionals().subscribe(professionals => {
-      console.log(professionals);
-      this.professionals = professionals;
-    });
-  }
-
-  deleteProfessional($event, professional) {
-    this.professionalService.deleteProfessional(professional);
-
   }
 
 }

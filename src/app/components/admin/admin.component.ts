@@ -8,8 +8,7 @@ import { ProfessionalService } from '../../services/professional.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-  professional: PRO;
-
+  professional = {} as PRO;
   // tslint:disable-next-line: no-inferrable-types
   specialty: string = '';
 
@@ -18,26 +17,13 @@ export class AdminComponent implements OnInit {
     console.log(this.specialty);
   }
 
-  addProfessional(specialist: string, workplace: string, contact: string, insurance: string) {
-    this.professional.specialty = this.specialty;
-    this.professional.specialist = specialist;
-    this.professional.workplace = workplace;
-    this.professional.contact = contact;
-    this.professional.insurance = insurance;
-
-    console.log('json:', this.professional);
-    this.professionalService.addProfessional(this.professional);
-    this.professional = {} as PRO;
-  }
   constructor(public professionalService: ProfessionalService) {}
 
-  ngOnInit() {
-    this.professional = new PRO(
-      'specialty',
-      'specialist',
-      'workplace',
-      'contact',
-      'insurance'
-    );
+  ngOnInit() { }
+
+  addProfessional() {
+    this.professionalService.addProfessional(this.professional);
+    console.log(this.professional);
+
   }
 }
