@@ -1,9 +1,13 @@
 .img-logo {
-   width:300px;
-   height:100px;
-   box-sizing: border-box;
-}
-.h4 {
+   max-width: 90%;
+   max-height: 100px;
+ }
+ 
+ .navbar button {
+   margin-bottom: 10px;
+ }
+ 
+ .h4 {
    color: #666666;
    font-family: Roboto;
    font-style: normal;
@@ -11,9 +15,14 @@
    font-size: 24px;
    line-height: 30px;
  }
-
-.h7 {
+ 
+ .h7 {
    color: #0000;
    font-family: Arial, Helvetica, sans-serif;
    font-weight: lighter;
  }
+ 
+ .navbar {
+   padding: 0;
+ }
+ 
