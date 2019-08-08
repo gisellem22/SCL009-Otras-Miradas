@@ -1,2 +1,84 @@
 
+<!--First Option for Prototype and Second Option for Dinamic content-->
+<div class="card  w-100 mt-1">
+    <div class="card-body">
+        <h1 class="text-left">Talleres</h1>
+        <div class="card  w-100">
+            <div class="card-body">
+                <table class="table table-sm table-hover">
+                    <tbody>
+                        <!-- First Option for activity -->
+                        <h2>Agosto</h2>
+                            <tr>
+                                <td mr-1><h2>08</h2></td>
+                                <td>
+                                    <h3>Taller de Mosaico</h3>
+                                    <p>Horario: 19 a 21 hrs.</p>
+                                    <p>Valor: $45.000</p>
+                                    <p>Inscripciones tallerOM@gmail.com</p>
+                                    <p>Prepárate Aprender de Mosaico</p>
+                                </td>
+                            </tr>
 
+                        <!-- Second Option for activity-->
+                        <tr *ngFor="let activity of activityList">
+                            <td class="month">Example</td>
+                            <td>{{activity.name}}</td>
+                            <td>{{activity.date}}</td>
+                            <td>{{activity.schedules}}</td>
+                            <td>{{activity.price}}</td>
+                            <td>{{activity.inscription}}</td>
+                            <td>{{activity.commets}}</td>
+                            <a class="btn btn-secondary text-while" (click)="onEdit(product)">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a class="btn btn-danger text-while" (click)="onDelete(product.$key)">
+                                <i class="fas fa-trash-alt"></i>
+                            </a>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card  w-100">
+                <div class="card-body">
+                    <table class="table table-sm table-hover">
+                        <tbody>
+                            <!-- First Option for activity -->
+                            <h2>Septiembre</h2>
+                                <tr>
+                                    <td><h2>06</h2></td>
+                                    <td>
+                                        <h3>Taller de Telar</h3>
+                                        <p>Horario: 18 a 21 hrs. </p>
+                                        <p>Valor:De $30.000 a $40.000</p>
+                                        <p>Inscripciones +569 546xxxx </p>
+                                        <p>Prepárate a trabajar con lanas y agujas</p>
+                                    </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card  w-100">
+                <div class="card-body">
+                    <table class="table table-sm table-hover">
+                        <tbody>
+                                <!-- First Option for activity -->
+                            <h2>Octubre</h2>
+                            <tr>
+                                <td><h2>06</h2></td>
+                                <td>
+                                    <h3>Taller de Huerto Vertical</h3>
+                                    <p>Horario: 10 a 11</p>
+                                    <p>Valor: Gratuito</p>
+                                    <p>Inscripciones tallerOM@gmail.com</p>
+                                    <p>Lila nos enseñará a confecionar huertos...</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </div>
+</div>
