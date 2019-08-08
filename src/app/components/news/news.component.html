@@ -1,1 +1,20 @@
-<p>news works!</p>
+<div *ngIf="professionals.length > 0;else noprofessionals">
+  <ul>
+    <li *ngFor="let p of professionals">
+     {{ p.specialty }} <br>
+     {{ p.specialist }} <br>
+     {{ p.workplace }} <br>
+     {{ p.contact }} <br>
+     {{ p.insurance }}
+
+     <button (click)="deleteProfessional($event, p)">
+      Eliminar
+    </button>
+    </li>
+  </ul>
+</div>
+
+<ng-template #noprofessionals>
+  <p>NO EXISTEN PROFESIONALES REGISTRADOS</p>
+</ng-template>
+

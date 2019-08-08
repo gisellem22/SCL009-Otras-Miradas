@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PRO } from 'src/app/professional';
+import { PRO } from 'src/app/models/professional';
+import { ProfessionalService } from '../../services/professional.service';
 
 @Component({
   selector: 'app-admin',
@@ -7,32 +8,36 @@ import { PRO } from 'src/app/professional';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-
   professional: PRO;
 
-  specialty:string = "";
+  // tslint:disable-next-line: no-inferrable-types
+  specialty: string = '';
 
-  
-
-  onChange(event:any){
+  onChange(event: any) {
     this.specialty = event.target.value;
-    console.log(this.specialty)
+    console.log(this.specialty);
   }
 
-  onClick(specialist:string, workplace:string, contact:string, insurance:string){
-this.professional.specialty = this.specialty;
-this.professional.specialist = specialist;
-this.professional.workplace = workplace;
-this.professional.contact = contact;
-this.professional.insurance = insurance;
+  addProfessional(specialist: string, workplace: string, contact: string, insurance: string) {
+    this.professional.specialty = this.specialty;
+    this.professional.specialist = specialist;
+    this.professional.workplace = workplace;
+    this.professional.contact = contact;
+    this.professional.insurance = insurance;
 
-
-console.log("json:",this.professional)
-}
-  constructor() { }
+    console.log('json:', this.professional);
+    this.professionalService.addProfessional(this.professional);
+    this.professional = {} as PRO;
+  }
+  constructor(public professionalService: ProfessionalService) {}
 
   ngOnInit() {
-    this.professional = new PRO("specialty","specialist","workplace","contact","insurance")
+    this.professional = new PRO(
+      'specialty',
+      'specialist',
+      'workplace',
+      'contact',
+      'insurance'
+    );
   }
-
 }
