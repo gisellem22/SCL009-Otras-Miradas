@@ -5,11 +5,11 @@ export class PRO {
     public workplace: string;
     public contact: string;
     public insurance: string
-  constructor(specialty: string, specialist: string, workplace: string,contact:string, insurance: string) {
-   this.specialty = specialty,
-   this.specialist = specialist,
-   this.workplace = workplace,
-   this.contact = contact,
-   this.insurance = insurance
-  }
+    constructor(specialty: string, specialist: string, workplace: string,contact:string, insurance: string) {
+      this.specialty = specialty,
+      this.specialist = specialist,
+      this.workplace = workplace,
+      this.contact = contact,
+      this.insurance = insurance
+     }
 }
