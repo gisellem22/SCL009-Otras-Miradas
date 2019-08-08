@@ -1,22 +1,28 @@
 <!-- Header -->
-<header>
-  <nav class="navbar navbar-light bg-light">
-    <div class="text-align:center m-4">
+<header class="container">
+  <nav class="row navbar navbar-light bg-light">
+    <div class="col-12 col-lg-4">
       <a class="navbar-brand" routerLink="/home" routerLinkActive="active">
-        <img style="text-align: center" width="300" src="../assets/img/OMiradas-logo.png" alt="Logo Otras Miradas">
+        <img src="../assets/img/OMiradas-logo.png" alt="Logo Otras Miradas" class="img-logo">
       </a>
     </div>
-    <div class="container-fluid">
+    <div class="col">
       <div class="row">
-        <div class="text-align:center m-2">
-          <button class="btn btn-warning btn-sm m-2" type="button" routerLink="/contact"
-            routerLinkActive="active"><h6>Profesionales</h6></button>
-          <button class="btn btn-warning btn-sm m-1" type="button" routerLink="/about" 
-            routerLinkActive="active"><h6>Sobre Nosotros</h6></button>
-          <button class="btn btn-warning btn-sm mt-1 m-2" type="button" routerLink="/news"
-            routerLinkActive="active"><h6>Talleres</h6></button>
-          <button class="btn btn-warning btn-sm mt-1 m-2" type="button" routerLink="/condition"
-            routerLinkActive="active"><h6>Diagnosticos </h6></button>
+        <div class="col-6 col-md-3">
+          <button class="btn btn-warning btn-sm btn-block" type="button" routerLink="/professionals"
+                  routerLinkActive="active">Profesionales</button>
+        </div>
+        <div class="col-6 col-md-3">
+          <button class="btn btn-warning btn-sm btn-block" type="button" routerLink="/about"
+                  routerLinkActive="active">Sobre Nosotros</button>
+        </div>
+        <div class="col-6 col-md-3">
+          <button class="btn btn-warning btn-sm btn-block" type="button" routerLink="/news"
+                  routerLinkActive="active">Talleres</button>
+        </div>
+        <div class="col-6 col-md-3">
+          <button class="btn btn-warning btn-sm btn-block" type="button" routerLink="/condition"
+                  routerLinkActive="active">Condiciones</button>
         </div>
       </div>
     </div>
@@ -26,7 +32,7 @@
 <router-outlet></router-outlet>
 <!-- Footer -->
 <footer class="text-center w-100 mt-5 mr-5">
-  
+
   <div class="container text-left w-100">
       <h4> Siguenos en nuestras redes </h4>
       <div class="rounded float-left m-3">
@@ -45,7 +51,7 @@
         <a href="https://www.facebook.com/groups/891525974242365/">
           <img  class="img-fluid  m-2" width="60" src="https://i.ibb.co/hRLfYGp/facebook-circled.png" alt="logo facebook">
           <h6> Facebook </h6>
-        </a>  
-      </div> 
+        </a>
+      </div>
   </div>
 </footer>

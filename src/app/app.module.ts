@@ -13,6 +13,8 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NewsComponent } from './components/news/news.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ConditionComponent } from './components/condition/condition.component';
+import { ProfessionalsComponent } from './components/professionals/professionals.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AdminComponent } from './components/admin/admin.component';
@@ -25,6 +27,8 @@ import { FormsModule } from '@angular/forms';
     AboutComponent,
     ContactComponent,
     NewsComponent,
+    ProfessionalsComponent,
+    ConditionComponent,
     PageNotFoundComponent,
     AdminComponent
   ],
