@@ -1,0 +1,53 @@
+<div class="professionals container">
+    <div class="row">
+        <div class="col-12 doc-group">
+            Neuróloga
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let professional of professionals">
+            <div class="card">
+                <div class="row no-gutters">
+                    <div class="col-auto">
+                        <img src="../../../assets/img/doct.png" class="card-img" alt="...">
+                    </div>
+                    <div class="col">
+                        <div class="card-body">
+                            <p class="card-text">{{professional.firstName}} {{professional.lastName}}</p>
+                            <p class="card-text">
+                              {{professional.workPlace}}
+                            </p>
+                            <p class="card-text">
+                                {{professional.contact}}
+                              </p>
+                            <p class="card-text"><small class="text-muted">
+                              {{professional.securityHealthSystem}}</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <div class="col-12 doc-group">
+        Cirujano
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let professional of professionals">
+        <div class="card">
+          <div class="row no-gutters">
+            <div class="col-auto">
+              <img src="../../../assets/img/doct.png" class="card-img" alt="...">
+            </div>
+            <div class="col">
+              <div class="card-body">
+                <p class="card-text">{{professional.firstName}} {{professional.lastName}}</p>
+                <p class="card-text">
+                  {{professional.workPlace}}
+                </p>
+                <p class="card-text"><small class="text-muted">
+                  {{professional.securityHealthSystem}}</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
