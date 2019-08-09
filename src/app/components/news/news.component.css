@@ -1,24 +1,17 @@
-.h1 {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
-  }
-.h2 {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 30px;
-  }
-
-.h3 {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 20px;
+.row > .doc-group {
+  background-color: rgb(88, 136, 187);
+  margin-bottom: 0.5em;
 }
 
- 
+.card {
+border: 0px;
+padding: 10px 0 10px 0;
+}
+
+.card-body {
+padding: 0 0 0 10px;
+}
+
+.card-body > .card-text {
+margin-bottom: 0;
+}
