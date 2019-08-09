@@ -3,17 +3,13 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 import { PRO } from '../models/professional';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-
-
 @Injectable({
   providedIn: 'root'
 })
 export class ProfessionalService {
-
   professionalsCollection: AngularFirestoreCollection<PRO>;
   professionals: Observable<PRO[]>;
   professionalDoc: AngularFirestoreDocument<PRO>;
-
   constructor(public db: AngularFirestore) {
     // this.professionals = this.db.collection('professionals').valueChanges();
     this.professionalsCollection = this.db.collection('professionals');
@@ -24,18 +20,14 @@ export class ProfessionalService {
       return data;
     })));
   }
-
   getProfessionals() {
     return this.professionals;
   }
-
   addProfessional(professional: PRO) {
     this.professionalsCollection.add(professional);
   }
-
   deleteProfessional(professional: PRO) {
     this.professionalDoc = this.db.doc(`professionals/${professional.idFireStore}`);
     this.professionalDoc.delete();
   }
-
 }
