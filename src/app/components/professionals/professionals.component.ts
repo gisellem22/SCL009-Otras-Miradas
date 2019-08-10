@@ -12,6 +12,7 @@ export class ProfessionalsComponent implements OnInit {
   specialty: PRO[];
   //areas: string[] = ["Broncopulmonar","Cirugía","Fisiatría","Fonoaudiología","Genética Clínica","Infectología","Kinesiología","Neurología","Psicología","Psicopedagogía","Terapia Ocupaciona"]
   areas: string[] = [];
+  //hola
 
   filterSpecialty() {
     this.professionals.forEach(p => {
