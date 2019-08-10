@@ -21,7 +21,7 @@ export class ProfessionalsComponent implements OnInit {
 //     }
   constructor(public professionalService: ProfessionalService) { }
   ngOnInit() {
-this.professionalService.getProfessionals().subscribe(professionals => {
+  this.professionalService.getProfessionals().subscribe(professionals => {
       this.professionals = professionals;
      // this.filterSpecialty();
     });
