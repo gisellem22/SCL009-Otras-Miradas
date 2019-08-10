@@ -1,8 +1,15 @@
 .row > .doc-group {
-  background-color: rgb(88, 136, 187);
-  margin-bottom: 0.5em;
+  background-color: rgb(143, 161, 170);
+  /* margin-bottom: 0.5em; */
+  /* position: absolute; */
+  width: 320px;
+  height: 50px;
+  /* left: 20px; */
+  /* top: 262px; */
 }
-
+.doc-group1 {
+  border-bottom: solid rgb(143, 161, 170);
+} 
 .card {
 border: 0px;
 padding: 10px 0 10px 0;
@@ -18,4 +25,9 @@ margin-bottom: 0;
 
 .h4 {
   max-width: 5em;
+}
+
+.h5 {
+  background-color: white;
+  /* max-width: 5em; */
 }
