@@ -1,0 +1,29 @@
+.card-img {
+    max-width: 5em;
+}
+.card {
+    /* border: 0px; */
+    padding: 10px 0 10px 0;
+}
+.card-body {
+    padding: 0 0 0 10px;
+}
+.card-body > .card-text {
+    margin-bottom: 0;
+}
+.doc-group {
+    background-color: rgb(143, 161, 170);
+    /* margin-bottom: 0.5em; */
+    /* position: absolute; */
+    width: 320px;
+    height: 50px;
+    /* left: 20px; */
+    /* top: 262px; */
+}
+.btn-ttc,
+.btn-ttc:hover,
+.btn-ttc:active {
+    color: #484848;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color:#FFEEBA;
+  }
