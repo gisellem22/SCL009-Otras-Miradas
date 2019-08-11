@@ -13,8 +13,8 @@ export class AdminComponent implements OnInit {
   professionals: PRO[];
   professional = {} as PRO;
   editingProfessional: PRO;
-  // tslint:disable-next-line: no-inferrable-types
-  specialty: string = ''; editing: boolean = false;
+  specialty: string = ''; 
+  editing: boolean = false;
 
   constructor(public professionalService: ProfessionalService) { }
 

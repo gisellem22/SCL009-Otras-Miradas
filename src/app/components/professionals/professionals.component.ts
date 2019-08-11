@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { ProfessionalService } from '../../services/professional.service';
 import { PRO } from 'src/app/models/professional';
 ​
@@ -9,32 +9,39 @@ import { PRO } from 'src/app/models/professional';
 })
 export class ProfessionalsComponent implements OnInit {
   professionals: PRO[];
-  specialty: PRO[];
-  //areas: string[] = ["Broncopulmonar","Cirugía","Fisiatría","Fonoaudiología","Genética Clínica","Infectología","Kinesiología","Neurología","Psicología","Psicopedagogía","Terapia Ocupaciona"]
-  areas: string[] = [];
-  //hola
+  area:any;
+  specialty: string = ''; 
 
-  filterSpecialty() {
-    this.professionals.forEach(p => {
-      this.areas.push(p.specialty)
-    })
-    this.uniqueAreas()
+  onChange(event: any) {
+    this.specialty = event.target.value;
+    this.filterSpecialty(this.specialty)
+    console.log(this.specialty)
   }
-  uniqueAreas() {
-    this.areas = this.areas.filter((value, index, self) => self.indexOf(value) === index)
-    console.log(this.areas)
+
+  filterSpecialty(area:string) {
+  this.area = this.professionals.filter(p => {
+if (p.specialty === area) {
+  return p
+}  })
+    console.log(this.area)
   }
+
+  // uniqueAreas() {
+  //   this.areas = this.areas.filter((value, index, self) => self.indexOf(value) === index)
+  //   console.log(this.areas)
+  // }
 
   constructor(public professionalService: ProfessionalService) { }
   ngOnInit() {
 this.professionalService.getProfessionals().subscribe(professionals => {
       this.professionals = professionals;
       console.log(this.professionals);
-      this.filterSpecialty();
     });
   }
+
   deleteProfessional($event, professional) {
     this.professionalService.deleteProfessional(professional);
 ​
   }
 }
+
