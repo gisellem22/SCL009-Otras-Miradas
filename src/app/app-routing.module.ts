@@ -17,7 +17,7 @@ const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'news', component: NewsComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'condition', component: ConditionsComponent },
+  { path: 'conditions', component: ConditionsComponent },
   { path: 'professionals', component: ProfessionalsComponent },
   { path: 'admin', component: AdminComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
