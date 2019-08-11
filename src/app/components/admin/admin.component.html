@@ -7,7 +7,7 @@
       <div class="card mt-3">
         <form (ngSubmit)="addProfessional()">
           <div class="m-3">
-            <label for="specialty">Seleccione especilidad </label>
+            <label for="specialty">Seleccione especilidad (*) </label>
             <select class="form-control form-control" name="specialty" [(ngModel)]="professional.specialty" (change)="onChange($event)">
               <option value="Broncopulmonar">Broncopulmonar</option>
               <option value="Cirugía">Cirugía</option>
@@ -44,7 +44,7 @@
           </div>
           <div>
             <p class="m-3 mt-2">(*) Campo Obligatorio</p>
-            <button type="submit" class="btn btn-primary float-right mt-1 mr-4">
+            <button type="submit" class="btn btn-light float-right btn-sm ml-auto mr-3">
               <h6 class="m-2">Añadir</h6>
             </button>
           </div>
@@ -64,25 +64,25 @@
           <div class="card mt-3">
               <div class="row no-gutters">
                   <div class="col-auto">
-                      <img src="../../../assets/img/doct.png" class="card-img" alt="...">
+                      <img src="https://i.ibb.co/pRpm5T1/doc.png" class="card-img" alt="...">
                   </div>
-                  <div class="col">
+                  <div class="col m-4">
                     <div class="card-body">
-                      <p class="card-text">{{p.specialist}}</p>
+                      <p class="card-text font-weight-bold">{{p.specialist}}</p>
                       <!-- <input type="text" #specialist class="form-control" name="specialist" [(ngModel)]="p.specialist" placeholder="`{{p.specialist}}`"/> -->
                       <p class="card-text">{{p.specialty}}</p>
                       <p class="card-text">{{p.workplace}}</p>
                       <p class="card-text">{{p.contact}}</p>
                       <p class="card-text"><small class="text-muted">{{p.insurance}}</small></p>
                       <p class="card-text">{{p.reference}}</p>
-                      <button (click)="deleteProfessional($event, p)" class="btn btn-ttc m-1 mt-2">
-                        Eliminar
+                      <button (click)="deleteProfessional($event, p)" class="btn btn-ttc btn-sm ml-auto m-1 mt-2">
+                        <h6 class="m-2">Eliminar</h6> 
                       </button>
-                      <button (click)="editProfessional($event, p)" class="btn btn-light m-1 mt-2">
-                        Editar
+                      <button (click)="editProfessional($event, p)" class="btn btn-light btn-sm ml-auto m-1 mt-2">
+                        <h6 class="m-2">Editar</h6>
                       </button>
                       <div *ngIf="editing && editingProfessional.idFireStore == p.idFireStore">
-                        <form (ngSubmit)="updateProfessional()">
+                        <form class="mt-3" (ngSubmit)="updateProfessional()">
                           <div class="card-body">
                             <input type="text" class="form-control" name="specialist" [(ngModel)]="p.specialist" placeholder="Nombre del especialista">
                             <select class="form-control form-control" name="specialty" [(ngModel)]="p.specialty" (change)="onChange($event)">
@@ -103,7 +103,9 @@
                             <input type="text" class="form-control" name="insurance" [(ngModel)]="p.insurance" placeholder="Previsión de salud que atiende"/>
                             <input type="text" class="form-control" name="reference" [(ngModel)]="p.reference" placeholder="Referencia"/>
                           </div>
-                          <button type="submit" class="btn btn-primary mt-1">Actualizar</button>
+                          <button type="submit" class="btn btn-light float-right btn-sm ml-auto m-1 mt-3">
+                            <h6 class="m-2">Actualizar</h6>
+                          </button>
                         </form>
                       </div>
                     </div>
