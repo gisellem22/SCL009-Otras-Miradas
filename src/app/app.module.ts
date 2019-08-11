@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 // FIRESTORE
 import { environment } from '../environments/environment';
-import  { AngularFireModule } from 'angularfire2';
+import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 // COMPONENTS

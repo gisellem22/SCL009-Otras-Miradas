@@ -1,84 +1,191 @@
-
-<!--First Option for Prototype and Second Option for Dinamic content-->
-<div class="card  w-100 mt-1">
-    <div class="card-body">
-        <h1 class="text-left">Talleres</h1>
-        <div class="card  w-100">
-            <div class="card-body">
-                <table class="table table-sm table-hover">
-                    <tbody>
-                        <!-- First Option for activity -->
-                        <h2>Agosto</h2>
-                            <tr>
-                                <td mr-1><h2>08</h2></td>
-                                <td>
-                                    <h3>Taller de Mosaico</h3>
-                                    <p>Horario: 19 a 21 hrs.</p>
-                                    <p>Valor: $45.000</p>
-                                    <p>Inscripciones tallerOM@gmail.com</p>
-                                    <p>Prepárate Aprender de Mosaico</p>
-                                </td>
-                            </tr>
-                            
-                        <!-- Second Option for activity-->
-                        <tr *ngFor="let activity of activityList">
-                            <td class="month">Example</td>
-                            <td>{{activity.name}}</td>
-                            <td>{{activity.date}}</td>
-                            <td>{{activity.schedules}}</td>
-                            <td>{{activity.price}}</td>
-                            <td>{{activity.inscription}}</td>
-                            <td>{{activity.commets}}</td>
-                            <a class="btn btn-secondary text-while" (click)="onEdit(product)">
-                                <i class="fas fa-edit"></i>
-                            </a>
-                            <a class="btn btn-danger text-while" (click)="onDelete(product.$key)">
-                                <i class="fas fa-trash-alt"></i>                            
-                            </a>
-                        </tr>
-                    </tbody>
-                </table> 
+<!--First Option for Dinamic content and Second Option for Prototype-->
+<div class="container">
+    <h3 class="text-left m-3">Talleres, Terapias</h3>
+    <p class="m-3">Aquí podrás encontrar actividades para nuestros hijos y familias de la fundación.</p>
+    <div class="row">
+        <div class="col-12 doc-group m-2">
+            <h5 class="m-2">Agosto</h5>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 doc-group1 m-3">  
+            <div class="card w-100 m-2">
+                <!-- First Option for Dinamic content-->
+                <!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let p of activity">
+                     <div class="col">
+                        <div class="card-body">
+                            <p class="card-text">{{p.activitylist}}</p>
+                            <p class="card-text">{{p.activity}}</p>
+                            <p class="card-text">{{p.workplace}}</p>
+                            <p class="card-text">{{p.contact}}</p>
+                            <p class="card-text"><small class="text-muted">{{p.insurance}}</small></p>
+                        </div>
+                    </div> -->
+                
+                <!-- Second Option for prototype-->
+                <div class="row no-gutters">
+                    <div class="col-auto mt-1">
+                        <h4>08</h4>
+                    </div>
+                    <div class="col">                    
+                        <div class="card-body">
+                            <p class="card-text m-1">Taller de Mosaico</p>
+                            <p class="card-text">Horario: 19 a 21 hrs.</p>
+                            <p class="card-text">Valor: $45.000</p>
+                            <p class="card-text">Inscripciones tallerOM@gmail.com</p>
+                            <p class="card-text"><small class="text-muted">Prepárate Aprender de Mosaico</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 doc-group1 m-3">  
+            <div class="card w-100 m-2">    
+                <div class="row no-gutters">    
+                    <div class="col-auto mt-1">
+                        <h4>15</h4>
+                    </div>
+                    <div class="col">  
+                        <div class="card-body">
+                            <p class="card-text m-1">Clases de Natación</p>
+                            <p class="card-text">Horario: 18 a 20 hrs.</p>
+                            <p class="card-text">Valor: $35.000</p>
+                            <p class="card-text">Inscripciones tallerOM@gmail.com</p>
+                            <p class="card-text"><small class="text-muted">Prepárate para las clases guiadas</small></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="card  w-100">
-                <div class="card-body">
-                    <table class="table table-sm table-hover">
-                        <tbody>
-                            <!-- First Option for activity -->
-                            <h2>Septiembre</h2>
-                                <tr>
-                                    <td><h2>06</h2></td>
-                                    <td>
-                                        <h3>Taller de Telar</h3>
-                                        <p>Horario: 18 a 21 hrs. </p>
-                                        <p>Valor:De $30.000 a $40.000</p>
-                                        <p>Inscripciones +569 546xxxx </p>
-                                        <p>Prepárate a trabajar con lanas y agujas</p>
-                                    </td>
-                                </tr>
-                        </tbody>
-                    </table>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 doc-group1 m-3">      
+            <div class="card w-100 m-2">
+                <div class="row no-gutters">    
+                    <div class="col-auto mt-1">
+                        <h4>22</h4>
+                    </div>
+                    <div class="col">  
+                        <div class="card-body">
+                            <p class="card-text m-1">Taller de Telar</p>
+                            <p class="card-text">Horario: 18 a 21 hrs..</p>
+                            <p class="card-text">Valor:De $30.000 a $40.000</p>
+                            <p class="card-text">Inscripciones +569 546xxxx </p>
+                            <p class="card-text"><small class="text-muted">Prepárate a trabajar con lanas y agujas</small></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="card  w-100">
-                <div class="card-body">
-                    <table class="table table-sm table-hover">
-                        <tbody>
-                                <!-- First Option for activity -->
-                            <h2>Octubre</h2>
-                            <tr>
-                                <td><h2>06</h2></td>
-                                <td>
-                                    <h3>Taller de Huerto Vertical</h3>
-                                    <p>Horario: 10 a 11</p>
-                                    <p>Valor: Gratuito</p>
-                                    <p>Inscripciones tallerOM@gmail.com</p>
-                                    <p>Lila nos enseñará a confecionar huertos...</p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+        </div>           
+        <div class="col-12 doc-group m-2">
+            <h5 class="m-2">Septiembre</h5>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 doc-group1 m-3">  
+            <div class="card w-100 m-2">     
+                <div class="row no-gutters">    
+                    <div class="col-auto">
+                        <h4>15</h4>
+                    </div>
+                    <div class="col">  
+                        <div class="card-body">
+                            <p class="card-text">Clases de Natación</p>
+                            <p class="card-text">Horario: 18 a 20 hrs.</p>
+                            <p class="card-text">Valor: $35.000</p>
+                            <p class="card-text">Inscripciones tallerOM@gmail.com</p>
+                            <p class="card-text"><small class="text-muted">Prepárate para las clases guiadas</small></p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 doc-group1 m-3">  
+            <div class="card w-100 m-2">
+                <div class="row no-gutters">    
+                    <div class="col-auto">
+                        <h4>22</h4>
+                    </div>
+                    <div class="col">  
+                        <div class="card-body">
+                            <p class="card-text">Taller de Telar</p>
+                            <p class="card-text">Horario: 18 a 21 hrs..</p>
+                            <p class="card-text">Valor:De $30.000 a $40.000</p>
+                            <p class="card-text">Inscripciones +569 546xxxx </p>
+                            <p class="card-text"><small class="text-muted">Prepárate a trabajar con lanas y agujas</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 doc-group1 m-3">  
+            <div class="card w-100 m-2">    
+                <div class="row no-gutters">    
+                    <div class="col-auto">
+                        <h4>29</h4>
+                    </div>
+                    <div class="col">  
+                        <div class="card-body">
+                            <p class="card-text">Taller de Huerto Vertical</p>
+                            <p class="card-text">Horario: 10 a 11</p>
+                            <p class="card-text">Valor: Gratuito</p>
+                            <p class="card-text">Inscripciones tallerOM@gmail.com</p>
+                            <p class="card-text"><small class="text-muted">Lila nos enseñará a confecionar huertos...</small></p>
+                        </div>
+                    </div>
+                </div>                  
+            </div>
+        </div>                  
+        <div class="col-12 doc-group m-2">
+            <h5 class="m-2">Octubre</h5>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 doc-group1 m-3">
+            <div class="card w-100 m-2">
+                <div class="row no-gutters">
+                    <div class="col-auto">
+                        <h4>08</h4>
+                    </div>
+                    <div class="col">                    
+                        <div class="card-body">
+                            <p class="card-text">Taller de Mosaico</p>
+                            <p class="card-text">Horario: 19 a 21 hrs.</p>
+                            <p class="card-text">Valor: $45.000</p>
+                            <p class="card-text">Inscripciones tallerOM@gmail.com</p>
+                            <p class="card-text"><small class="text-muted">Prepárate Aprender de Mosaico</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 doc-group1 m-3">  
+            <div class="card w-100 m-2">
+                <div class="row no-gutters">    
+                    <div class="col-auto">
+                        <h4>15</h4>
+                    </div>
+                    <div class="col">  
+                        <div class="card-body">
+                            <p class="card-text">Clases de Natación</p>
+                            <p class="card-text">Horario: 18 a 20 hrs.</p>
+                            <p class="card-text">Valor: $35.000</p>
+                            <p class="card-text">Inscripciones tallerOM@gmail.com</p>
+                            <p class="card-text"><small class="text-muted">Prepárate para las clases guiadas</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 doc-group1 m-3">  
+            <div class="card w-100 m-2">    
+                <div class="row no-gutters">    
+                    <div class="col-auto">
+                        <h4>29</h4>
+                    </div>
+                    <div class="col">  
+                        <div class="card-body">
+                            <p class="card-text">Taller de Huerto Vertical</p>
+                            <p class="card-text">Horario: 10 a 11</p>
+                            <p class="card-text">Valor: Gratuito</p>
+                            <p class="card-text">Inscripciones tallerOM@gmail.com</p>
+                            <p class="card-text"><small class="text-muted">Lila nos enseñará a confecionar huertos...</small></p>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+        </div>
     </div>
 </div>
