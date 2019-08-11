@@ -1,70 +1,74 @@
 <div class="professionals container">
   <div class="row">
-    <div class="col-12 doc-group">
-      Añadir Profesional
+    <div class="col-12 col-sm-6 col-md-6">
+      <div class="col-12 mt-5">
+        <h4>Añadir Nuevo Profesional</h4>
+      </div>
+      <div class="card mt-3">  
+        <form (ngSubmit)="addProfessional()">
+          <div class="m-3">
+            <label for="specialty">Seleccione especilidad </label>
+            <select class="form-control form-control" name="specialty" [(ngModel)]="professional.specialty" (change)="onChange($event)">
+              <option value="Broncopulmonar">Broncopulmonar</option>
+              <option value="Cirugía">Cirugía</option>
+              <option value="Fisiatría">Fisiatría</option>
+              <option value="Fonoaudiología">Fonoaudiología</option>
+              <option value="Genética Clínica">Genética Clínica</option>
+              <option value="Infectología">Infectología</option>
+              <option value="Kinesiología">Kinesiología</option>
+              <option value="Neurología">Neurología</option>
+              <option value="Psicología">Psicología</option>
+              <option value="Psicopedagogía">Psicopedagogía</option>
+              <option value="Terapia Ocupacional">Terapia Ocupacional</option>
+            </select>
+          </div>
+          <div class="m-3">
+            <label for="specialist">Nombre del especialista (*)</label>
+            <input type="text" #specialist class="form-control" name="specialist" [(ngModel)]="professional.specialist" placeholder="Ingresa el texto aquí..."/>
+          </div>
+          <div class="m-3">
+            <label for="workplace">Lugar de trabajo (*)</label>
+            <input type="text" #workplace class="form-control" name="workplace" [(ngModel)]="professional.workplace" placeholder="Ingresa el texto aquí..."/>
+          </div>
+          <div class="m-3">
+            <label for="contact">Metodo de Contacto </label>
+            <input type="text" #contact class="form-control" name="contact" [(ngModel)]="professional.contact" placeholder="Ingresa el correo/teléfono/otro..."/>
+          </div>
+          <div class="m-3">
+            <label for="insurance">Previsión de salud que atiende </label>
+            <input type="text" #insurance class="form-control" name="insurance" [(ngModel)]="professional.insurance" placeholder="Ingresa el texto aquí..."/>
+          </div>
+          <div class="m-3">
+           <label for="insurance">Referencia </label>
+           <input type="text" #reference class="form-control" name="reference" [(ngModel)]="professional.reference" placeholder="Ingresa el texto aquí..."/>
+          </div>
+          <div>
+          <!-- <button type="submit" class="btn btn-primary" (click)="addProfessional(specialist.value, workplace.value, contact.value, ensurance.value)">
+           Añadir
+          </button> -->
+            <p class="m-3 mt-2">(*) Campo Obligatorio</p>
+            <button type="submit" class="btn btn-primary float-right mt-1 mr-4">
+              <h6 class="m-2">Añadir</h6>
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-    <form (ngSubmit)="addProfessional()">
-      <div>
-        <label for="specialty">Seleccione especilidad:</label>
-        <select class="form-control form-control" name="specialty" [(ngModel)]="professional.specialty" (change)="onChange($event)">
-          <option value="Broncopulmonar">Broncopulmonar</option>
-          <option value="Cirugía">Cirugía</option>
-          <option value="Fisiatría">Fisiatría</option>
-          <option value="Fonoaudiología">Fonoaudiología</option>
-          <option value="Genética Clínica">Genética Clínica</option>
-          <option value="Infectología">Infectología</option>
-          <option value="Kinesiología">Kinesiología</option>
-          <option value="Neurología">Neurología</option>
-          <option value="Psicología">Psicología</option>
-          <option value="Psicopedagogía">Psicopedagogía</option>
-          <option value="Terapia Ocupacional">Terapia Ocupacional</option>
-        </select>
-      </div>
-      <div>
-        <label for="specialist">Nombre del especialista:</label>
-        <input type="text" #specialist class="form-control" name="specialist" [(ngModel)]="professional.specialist" placeholder="Ingresa el texto aquí..."/>
-      </div>
-      <div>
-        <label for="workplace">Lugar de trabajo:</label>
-        <input type="text" #workplace class="form-control" name="workplace" [(ngModel)]="professional.workplace" placeholder="Ingresa el texto aquí..."/>
-      </div>
-      <div>
-        <label for="contact">Contacto:</label>
-        <input type="text" #contact class="form-control" name="contact" [(ngModel)]="professional.contact" placeholder="Ingresa el correo/teléfono/otro..."/>
-      </div>
-      <div>
-        <label for="insurance">Previsión de salud que atiende:</label>
-        <input type="text" #insurance class="form-control" name="insurance" [(ngModel)]="professional.insurance" placeholder="Ingresa el texto aquí..."/>
-      </div>
-      <div>
-        <label for="insurance">Referencia:</label>
-        <input type="text" #reference class="form-control" name="reference" [(ngModel)]="professional.reference" placeholder="Ingresa el texto aquí..."/>
-      </div>
-      <div>
-      <!-- <button type="submit" class="btn btn-primary" (click)="addProfessional(specialist.value, workplace.value, contact.value, ensurance.value)">
-        Añadir
-      </button> -->
-      <button type="submit" class="btn btn-primary mt-3">
-        Añadir
-      </button>
-      </div>
-    </form>
-    </div>
+    <div class="col-12 col-sm-6 col-md-6"></div>
   </div>
 </div>
 
-<div class="professionals container">
+<div class="professionals container mt-5">
   <div class="row">
       <div class="col-12 doc-group">
-        <h1>Profesionales</h1>
+        <h4 class="m-2">Profesionales</h4>
       </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let p of professionals">
-          <div class="card">
+      <div class="col-12 col-sm-6 col-md-4" *ngFor="let p of professionals">
+          <div class="card mt-3">
               <div class="row no-gutters">
-                  <!-- <div class="col-auto">
+                  <div class="col-auto">
                       <img src="../../../assets/img/doct.png" class="card-img" alt="...">
-                  </div> -->
+                  </div>
                   <div class="col">
                     <div class="card-body">
                       <p class="card-text">{{p.specialist}}</p>
@@ -74,12 +78,13 @@
                       <p class="card-text">{{p.contact}}</p>
                       <p class="card-text"><small class="text-muted">{{p.insurance}}</small></p>
                       <p class="card-text">{{p.reference}}</p>
-                      <button ((click)="deleteProfessional()" class="btn btn-primary mt-2">
+                      <button ((click)="editProfessional()" class="btn btn-ttc m-1 mt-2">
+                          Editar
+                      </button>
+                      <button ((click)="deleteProfessional()" class="btn btn-light m-1 mt-2">
                         Eliminar
                       </button>
-                      <button ((click)="editProfessional()" class="btn btn-primary mt-2">
-                        Editar
-                      </button>
+                      
                     </div>
                   </div>
               </div>
