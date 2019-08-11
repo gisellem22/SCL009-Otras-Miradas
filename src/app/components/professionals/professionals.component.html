@@ -1,8 +1,22 @@
 <div class="professionals container">
   <div class="row">
-      <div class="col-12 doc-group"  *ngFor="let a of areas">
+      <div class="col-12 doc-group">
+          <label for="specialty">Seleccione especilidad </label>
+          <select class="form-control form-control" name="specialty" (change)="onChange($event)">
+            <option value="Broncopulmonar">Broncopulmonar</option>
+            <option value="Cirugía">Cirugía</option>
+            <option value="Fisiatría">Fisiatría</option>
+            <option value="Fonoaudiología">Fonoaudiología</option>
+            <option value="Genética Clínica">Genética Clínica</option>
+            <option value="Infectología">Infectología</option>
+            <option value="Kinesiología">Kinesiología</option>
+            <option value="Neurología">Neurología</option>
+            <option value="Psicología">Psicología</option>
+            <option value="Psicopedagogía">Psicopedagogía</option>
+            <option value="Terapia Ocupacional">Terapia Ocupacional</option>
+          </select>
       </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let p of professionals">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let p of area">
           <div class="card">
               <div class="row no-gutters">
                   <div class="col-auto">
@@ -21,6 +35,9 @@
                           <p class="card-text"><small class="text-muted">
                             {{p.insurance}}</small>
                           </p>
+                          <p class="card-text">
+                              {{p.reference}}
+                            </p>
                       </div>
                   </div>
               </div>

@@ -17,6 +17,8 @@ export class ProfessionalService {
   constructor(public db: AngularFirestore) {
     // this.professionals = this.db.collection('professionals').valueChanges();
     this.professionalsCollection = this.db.collection('professionals');
+  }
+  getProfessionals() {
     this.professionals = this.professionalsCollection.snapshotChanges().pipe(map(actions => {
       return actions.map(a => {
         const data = a.payload.doc.data() as PRO;
@@ -24,8 +26,6 @@ export class ProfessionalService {
         return data;
       });
     }));
-  }
-  getProfessionals() {
     return this.professionals;
   }
   addProfessional(professional: PRO) {
