@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PRO } from 'src/app/models/professional';
+
 import { ProfessionalService } from '../../services/professional.service';
+import { PRO } from '../../models/professional';
 
 @Component({
   selector: 'app-admin',
@@ -8,37 +9,41 @@ import { ProfessionalService } from '../../services/professional.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-  professional = {} as PRO;
+
   professionals: PRO[];
+  professional = {} as PRO;
+  editingProfessional: PRO;
   // tslint:disable-next-line: no-inferrable-types
-  specialty: string = '';
+  specialty: string = ''; editing: boolean = false;
 
-  onChange(event: any) {
-    this.specialty = event.target.value;
-    console.log(this.specialty);
-  }
-
-  constructor(public professionalService: ProfessionalService) {}
+  constructor(public professionalService: ProfessionalService) { }
 
   ngOnInit() {
     this.professionalService.getProfessionals().subscribe(professionals => {
       this.professionals = professionals;
+      console.log(professionals);
     });
   }
-
+  onChange(event: any) {
+    this.specialty = event.target.value;
+  }
   addProfessional() {
-    this.professionalService.addProfessional(this.professional);
-    console.log(this.professional);
-    this.professional = {} as PRO;
+    if (this.professional.specialty !== '' && this.professional.specialist !== '' &&
+    this.professional.workplace !== '' && this.professional.reference !== '') {
+      this.professionalService.addProfessional(this.professional);
+      this.professional = {} as PRO;
+    }
   }
-
-  deleteProfessional($event, professional) {
+  deleteProfessional(event: any, professional: PRO) {
     this.professionalService.deleteProfessional(professional);
-​
   }
-
-  editProfessional() {
-
+  editProfessional(event: any, professional: PRO) {
+    this.editingProfessional = professional;
+    this.editing = !this.editing;
   }
-
+  updateProfessional() {
+    this.professionalService.updateProfessional(this.editingProfessional);
+    this.editingProfessional = {} as PRO;
+    this.editing = !this.editing;
+  }
 }

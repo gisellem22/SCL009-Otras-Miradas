@@ -38,7 +38,7 @@
         <input type="text" #insurance class="form-control" name="insurance" [(ngModel)]="professional.insurance" placeholder="Ingresa el texto aquí..."/>
       </div>
       <div>
-        <label for="insurance">Referencia:</label>
+        <label for="reference">Referencia:</label>
         <input type="text" #reference class="form-control" name="reference" [(ngModel)]="professional.reference" placeholder="Ingresa el texto aquí..."/>
       </div>
       <div>
@@ -74,12 +74,37 @@
                       <p class="card-text">{{p.contact}}</p>
                       <p class="card-text"><small class="text-muted">{{p.insurance}}</small></p>
                       <p class="card-text">{{p.reference}}</p>
-                      <button ((click)="deleteProfessional()" class="btn btn-primary mt-2">
+                      <button (click)="deleteProfessional($event, p)" class="btn btn-primary mt-2">
                         Eliminar
                       </button>
-                      <button ((click)="editProfessional()" class="btn btn-primary mt-2">
+                      <button (click)="editProfessional($event, p)" class="btn btn-primary mt-2">
                         Editar
                       </button>
+                      <div *ngIf="editing && editingProfessional.idFireStore == p.idFireStore">
+                        <form (ngSubmit)="updateProfessional()">
+                          <div class="card-body">
+                            <input type="text" class="form-control" name="specialist" [(ngModel)]="p.specialist" placeholder="Nombre del especialista">
+                            <select class="form-control form-control" name="specialty" [(ngModel)]="p.specialty" (change)="onChange($event)">
+                              <option value="Broncopulmonar">Broncopulmonar</option>
+                              <option value="Cirugía">Cirugía</option>
+                              <option value="Fisiatría">Fisiatría</option>
+                              <option value="Fonoaudiología">Fonoaudiología</option>
+                              <option value="Genética Clínica">Genética Clínica</option>
+                              <option value="Infectología">Infectología</option>
+                              <option value="Kinesiología">Kinesiología</option>
+                              <option value="Neurología">Neurología</option>
+                              <option value="Psicología">Psicología</option>
+                              <option value="Psicopedagogía">Psicopedagogía</option>
+                              <option value="Terapia Ocupacional">Terapia Ocupacional</option>
+                            </select>
+                            <input type="text" class="form-control" name="workplace" [(ngModel)]="p.workplace" placeholder="Lugar de trabajo"/>
+                            <input type="text" class="form-control" name="contact" [(ngModel)]="p.contact" placeholder="Contacto"/>
+                            <input type="text" class="form-control" name="insurance" [(ngModel)]="p.insurance" placeholder="Previsión de salud que atiende"/>
+                            <input type="text" class="form-control" name="reference" [(ngModel)]="p.reference" placeholder="Referencia"/>
+                          </div>
+                          <button type="submit" class="btn btn-primary mt-1">Actualizar</button>
+                        </form>
+                      </div>
                     </div>
                   </div>
               </div>
