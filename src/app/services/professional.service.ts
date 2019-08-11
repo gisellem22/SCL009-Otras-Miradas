@@ -18,6 +18,7 @@ export class ProfessionalService {
     // this.professionals = this.db.collection('professionals').valueChanges();
     this.professionalsCollection = this.db.collection('professionals');
   }
+
   getProfessionals() {
     this.professionals = this.professionalsCollection.snapshotChanges().pipe(map(actions => {
       return actions.map(a => {
@@ -28,6 +29,7 @@ export class ProfessionalService {
     }));
     return this.professionals;
   }
+
   addProfessional(professional: PRO) {
     this.professionalsCollection.add(professional);
   }
