@@ -1,4 +1,6 @@
-<div class="professionals container">
+<div class="professionals container text-align: justify ">
+    <h3 class="text-left m-3"> Profesionales</h3>
+    <p class="m-3">Aquí podrás encontrar información de profesionales para la atención de nuestros niños,recomendados por las familias de la fundación.</p>
   <div class="row">
       <div class="col-12 doc-group"  *ngFor="let a of areas">
       </div>
@@ -6,11 +8,11 @@
           <div class="card">
               <div class="row no-gutters">
                   <div class="col-auto">
-                      <img src="../../../assets/img/doct.png" class="card-img" alt="...">
+                      <img src="https://i.ibb.co/pRpm5T1/doc.png" class="card-img" alt="...">
                   </div>
                   <div class="col">
                       <div class="card-body">
-                          <p class="card-text">{{p.specialist}}</p>
+                          <p class="card-text font-weight-bold">{{p.specialist}}</p>
                           <p class="card-text">{{p.specialty}}</p>
                           <p class="card-text">
                             {{p.workplace}}
