@@ -13,7 +13,7 @@ export class AdminComponent implements OnInit {
   professionals: PRO[];
   professional = {} as PRO;
   editingProfessional: PRO;
-  specialty: string = ''; 
+  specialty: string = '';
   editing: boolean = false;
 
   constructor(public professionalService: ProfessionalService) { }
@@ -28,8 +28,8 @@ export class AdminComponent implements OnInit {
     this.specialty = event.target.value;
   }
   addProfessional() {
-    if (this.professional.specialty !== '' && this.professional.specialist !== '' &&
-    this.professional.workplace !== '' && this.professional.reference !== '') {
+    if (this.professional.specialty !== undefined && this.professional.specialist.length > 0 &&
+    this.professional.workplace.length > 0) {
       this.professionalService.addProfessional(this.professional);
       this.professional = {} as PRO;
     }
