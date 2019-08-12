@@ -22,8 +22,8 @@ export class ProfessionalsComponent implements OnInit {
   
     for (let key of keysIterable) {
       let obj = {
-        especialidad: key,
-        doctores: arrayGroup[key]
+        area: key,
+        professionals: arrayGroup[key]
       };
       resultArray.push(obj);
     }
