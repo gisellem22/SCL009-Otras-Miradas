@@ -29,7 +29,7 @@ export class AdminComponent implements OnInit {
   }
   addProfessional() {
     if (this.professional.specialty !== undefined && this.professional.specialist.length > 0 &&
-    this.professional.workplace.length > 0) {
+    this.professional.workplace !== undefined) {
       this.professionalService.addProfessional(this.professional);
       this.professional = {} as PRO;
     }
