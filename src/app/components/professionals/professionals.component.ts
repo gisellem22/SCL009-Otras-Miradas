@@ -14,8 +14,6 @@ export class ProfessionalsComponent implements OnInit {
   specialty: string = '';
   areas:any = [];
 
- //para imprimir categorias dinámicas
-
   arrayMap (array:any) {
     console.log("array: ",array)
     let arrayGroup = this.groupBy(array, "specialty");
@@ -40,27 +38,6 @@ export class ProfessionalsComponent implements OnInit {
       return rv;
     }, {});
   };
-  
-// para hacer el select
-
-//   onChange(event: any) {
-//     this.specialty = event.target.value;
-//     this.filterSpecialty(this.specialty)
-//     console.log(this.specialty)
-//   }
-
-//   filterSpecialty(area:string) {
-//   this.area = this.professionals.filter(p => {
-// if (p.specialty === area) {
-//   return p
-// }  })
-//     console.log(this.area)
-//   }
-
-  // uniqueAreas() {
-  //   this.areas = this.areas.filter((value, index, self) => self.indexOf(value) === index)
-  //   console.log(this.areas)
-  // }
 
   constructor(public professionalService: ProfessionalService) { }
   ngOnInit() {
