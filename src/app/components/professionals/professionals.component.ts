@@ -32,7 +32,6 @@ export class ProfessionalsComponent implements OnInit {
   }
   
   groupBy (xs, key) {
-    console.log(xs)
     return xs.reduce((rv, x) => {
       (rv[x[key]] = rv[x[key]] || []).push(x);
       return rv;
@@ -44,7 +43,6 @@ export class ProfessionalsComponent implements OnInit {
 this.professionalService.getProfessionals().subscribe(professionals => {
       this.professionals = professionals;
       this.areas = this.arrayMap(this.professionals)
-      console.log(this.professionals);
       console.log("areas", this.areas)
     });
 
