@@ -1,11 +1,63 @@
-<div style="text-align:center">
-  <h1> Welcome to {{ title }}! </h1>
-</div>
-
-<nav>
-  <a routerLink="/home" routerLinkActive="active">Home</a>
-  <a routerLink="/about" routerLinkActive="active">About</a>
-  <a routerLink="/news" routerLinkActive="active">News</a>
-  <a routerLink="/contact" routerLinkActive="active">Contact</a>
-</nav>
+<!-- Header -->
+<header class="container">
+  <nav class="row navbar navbar-light bg-light">
+    <div class="col-12 col-lg-4">
+      <a class="navbar-brand" routerLink="/home" routerLinkActive="active">
+        <img src="../assets/img/OMiradas-logo.png" alt="Logo Otras Miradas" class="img-logo">
+      </a>
+    </div>
+    <div class="col">
+      <div class="row">
+        <div class="col-6 col-md-3">
+          <button class="btn btn-warning btn-sm btn-block" type="button" routerLink="/professionals"
+                  routerLinkActive="active">Profesionales</button>
+        </div>
+        <div class="col-6 col-md-3">
+          <button class="btn btn-warning btn-sm btn-block" type="button" routerLink="/about"
+                  routerLinkActive="active">Sobre Nosotros</button>
+        </div>
+        <div class="col-6 col-md-3">
+          <button class="btn btn-warning btn-sm btn-block" type="button" routerLink="/news"
+                  routerLinkActive="active">Actividades</button>
+        </div>
+        <div class="col-6 col-md-3">
+          <button class="btn btn-warning btn-sm btn-block" type="button" routerLink="/conditions"
+                  routerLinkActive="active">Condiciones</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- SPA -->
 <router-outlet></router-outlet>
+<!-- Footer -->
+<footer class="text-center w-100 mt-5 mr-5">
+
+  <div class="container text-left w-100">
+      <h4> Siguenos en nuestras redes </h4>
+      <div class="rounded float-left m-3">
+        <a href="https://wa.me/56996781226">
+          <img  class="img-fluid  m-3" width="70" src="https://i.ibb.co/N1QG2Wz/whatsapp.png" alt="logo whatsapp">
+          <h6 class="m-3"> Whatsapp </h6>
+        </a>
+      </div>
+      <div class="rounded float-left m-3">
+        <a href="https://www.instagram.com/fundacion.otras.miradas/?utm_source=ig_profile_share&igshid=1u187ez8g2dqj">
+          <img  class="img-fluid  m-3" width="70" src="https://i.ibb.co/QptVhkv/instagram-new.png" alt="logo instagram">
+          <h6 class="m-3"> Instagram </h6>
+        </a>
+      </div>
+      <div class="rounded float-left m-3">
+        <a href="https://www.facebook.com/groups/891525974242365/">
+          <img  class="img-fluid  m-3" width="70" src="https://i.ibb.co/hRLfYGp/facebook-circled.png" alt="logo facebook">
+          <h6 class="m-3"> Facebook </h6>
+        </a>
+      </div>
+      <div class="rounded float-left m-3">
+        <a href="mailto:fotrasmiradas@gmail.com">
+          <img  class="img-fluid  m-3" width="70" src="https://i.ibb.co/42b6Pg5/gmail.png" alt="logo gmail">
+          <h6 class="m-3"> Gmail </h6>
+        </a>
+      </div>
+  </div>
+</footer>

@@ -1,0 +1,19 @@
+.row > .doc-group {
+    background-color:rgb(143, 161, 170);
+    margin-bottom: 0.5em;
+    color: white;
+
+}
+.card {
+border: 0px;
+padding: 10px 0 10px 0;
+}
+.card-body {
+padding: 0 0 0 10px;
+}
+.card-body > .card-text {
+margin-bottom: 0;
+}
+.card-img {
+max-width: 5em;
+}
